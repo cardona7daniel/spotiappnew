@@ -1,0 +1,11 @@
+<div class="card-columns m-5 animated fadeIn">
+    <div class="card" *ngFor="let dato of datos">
+      <img class="card-img-top" [src]="dato.images | noimages" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{dato.name}}</h5>
+        <p  *ngIf="dato.artists" class="card-text">
+          <span *ngFor="let artista of dato.artists" class="badge badge-pill badge-dark">{{artista.name }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
